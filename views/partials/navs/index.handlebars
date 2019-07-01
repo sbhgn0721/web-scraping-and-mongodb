@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <h1>Mongo Scraper</h1>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/saved">Saved Articles</a></li>
+
+        </ul>
+        <button class="btn btn-danger btn-large" id="scrapeBtn"><a href="/api/articles/scrape">SCRAPE NEW
+                ARTICLES!</a>
+        </button>
+
+        <form class="form-inline" action="/api/articles_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-danger" id="clearBtn">CLEAR ARTICLES!</button>
+        </form>
+
+
+    </div>
+</nav>
