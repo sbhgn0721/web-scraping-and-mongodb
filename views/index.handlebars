@@ -29,8 +29,10 @@
     </div>
 
     {{/each}}
+   
+  
 
-    {{else}}
+   {{else}}
     <div class="card">
         <div class="card-body">
             Uh Oh. Looks like we don't have any saved articles.
@@ -41,10 +43,11 @@
             Would You Like to Browse Available Articles?
         </div>
         <div class="card-body">
-            <p class="card-text text-center"><a href="/api/articles/scrape">Try Scraping New Articles</a></p>
+            <p class="card-text text-center"><a href="/scrape">Try Scraping New Articles</a></p>
             <p class="card-text text-center"><a href="/saved">Go to Saved Articles</a></p>
 
         </div>
     </div>
-    {{/if}}
+ 
+     {{/if}}
 </div>

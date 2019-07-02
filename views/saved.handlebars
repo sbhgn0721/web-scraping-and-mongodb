@@ -22,20 +22,21 @@
                 </form>
             </div>
             <div class="col col-md-2">
-                <a id="btn" class="btn btn-success" href="#" data-toggle="modal" data-target="#{{this.id}}">ARTICLE
-                    NOTES</a>
+                <button type ="button" id="btn" class="btn btn-success" data-toggle="modal" data-target="#{{this.id}}">ARTICLE NOTES</button>
             </div>
         </div>
         <div class="card-body">
             <p class="card-text">{{this.excerpt}}</p>
         </div>
+
+    {{> content/modal}}
     </div>
-    <div>
-        {{> content/modal}}
-    </div>
+  
+       
+    
 
 
-    {{/each}}
+      {{/each}}
 
     {{else}}
     <div class="card">
@@ -48,7 +49,7 @@
             Would You Like to Browse Available Articles?
         </div>
         <div class="card-body">
-            <p class="card-text text-center"><a href="/api/articles/scrape">Browse Articles</a></p>
+            <p class="card-text text-center"><a href="/scrape">Browse Articles</a></p>
         </div>
     </div>
     {{/if}}
