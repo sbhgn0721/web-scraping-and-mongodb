@@ -127,7 +127,16 @@ router.get("/scrape", function (req, res) {
                 
                 //console.log(result);
                 // create a new article using the "result" object built from scraping
-                Article.create(result)
+                // Article.update({"title": result.title}, result,{upsert:true})
+                //     .then(function (dbArticle) {
+                //         //view the added result in the console
+                //         console.log(dbArticle);
+                //     })
+                //     .catch(function (err) {
+                //         console.log(err);
+                //     });
+            
+                    Article.create(result)
                     .then(function (dbArticle) {
                         //view the added result in the console
                         console.log(dbArticle);
@@ -135,7 +144,6 @@ router.get("/scrape", function (req, res) {
                     .catch(function (err) {
                         console.log(err);
                     });
-            
 
         });
         res.redirect('/');

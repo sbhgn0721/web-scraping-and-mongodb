@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
         .where('saved').equals(false)
         .where('deleted').equals(false)
         .sort('-date')
-        .limit(20)
+        .limit(5)
         .exec(function(error, articles) {
             if (error) {
                 console.log(error);
