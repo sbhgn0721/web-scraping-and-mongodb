@@ -1,6 +1,7 @@
 # web-scraping-and-mongodb
 
 * Heroku deployed link:
+https://mighty-eyrie-36325.herokuapp.com/
 
 
 * The app that accomplishes the following:
