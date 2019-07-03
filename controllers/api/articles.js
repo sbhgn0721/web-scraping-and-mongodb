@@ -108,7 +108,6 @@ router.delete('/:id', function(req, res) {
     );
 });
 
-
 // scrape articles
 router.get("/scrape", function (req, res) {
     axios.get("https://www.finimize.com/wp/").then(function (response) {
