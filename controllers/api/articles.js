@@ -118,12 +118,13 @@ router.get("/scrape", function (req, res) {
         var result = {};
 
         $("article.article").each(function (i, element) {
-            if (i <= 5) {
+            
                 //add the title and excerpt of every article, and save them as properties of the result
                 result.title = $(this).find("h3.title").text();
                 result.excerpt = $(this).find("p.excerpt").text();
                 result.link = $(this).find("div").attr("onclick").replace(/location.href='/, "").slice(0, -1);
 
+                
                 //console.log(result);
                 // create a new article using the "result" object built from scraping
                 Article.create(result)
@@ -134,7 +135,7 @@ router.get("/scrape", function (req, res) {
                     .catch(function (err) {
                         console.log(err);
                     });
-            }
+            
 
         });
         res.redirect('/');
